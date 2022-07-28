@@ -24,6 +24,7 @@ const Player = () => {
     const [repeat, setRepeat] = useState(false);
 
     const onPlay = ({payload}) => {
+        console.log(payload);
         setUrl(payload);
         setPlaying(true);
     }
@@ -35,7 +36,7 @@ const Player = () => {
 
     const onInit = ({payload}) => {
         const {resourceName, screenName, posterUrl} = payload;
-
+        console.log(payload);
         setScreenName(screenName);
         setResourceName(resourceName);
         setPosterUrl(posterUrl);
